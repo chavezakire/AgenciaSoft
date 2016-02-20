@@ -11,5 +11,17 @@ public class MngCliente {
         return port.consultaPersonaXML(tipoDoc, numDoc);
     }  
     
+    
+    //public String saveUser(String dni, String nombre, String paterno, String materno, String nacimiento, String sexo, String departamento, 
+                        //String provincia, String distrito, String direccion, String user, String password){
+        
+        //try {
+        //    String sql = "";
+        //    sql = "";
+        //    stmt.execute(sql);
+        //    return true;
+        //} catch (Exception e) {
+        //}
+    //}
        
 }
