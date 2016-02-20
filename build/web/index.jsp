@@ -4,7 +4,7 @@
 <!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
 
 <%@include file="header_page.jsp" %>
-    
+   
 <body>
 
 <!--=== Slider ===-->

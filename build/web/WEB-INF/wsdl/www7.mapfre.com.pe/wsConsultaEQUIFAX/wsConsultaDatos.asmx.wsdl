@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.mapfre.com.pe/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://www.mapfre.com.pe/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.mapfre.com.pe/">
+      <s:element name="ConsultaPlacaXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="numPlaca" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaPlacaXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="VEHICULO" type="tns:VEHICULO" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="VEHICULO">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NUM_PLACA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RESPUESTA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUM_CHASIS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NUM_MOTOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_MARCA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DES_MARCA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_MODELO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DES_MODELO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DES_MODELO_SOAT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_SUBMODELO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ANHO_FABRICACION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VAL_SUBMODELO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_USO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DES_USO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_COLOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DES_COLOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIP_VOLANTE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_ZONA_TARIFARIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CANTIDAD_ASIENTOS" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_CATEGORIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DES_CATEGORIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIP_DOCUM_CONT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_DOCUM_CONT" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_PLAZA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DES_PLAZA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MENSAJE" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ConsultaPersonaXML">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tipoDoc" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="numDoc" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ConsultaPersonaXMLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PERSONA" type="tns:PERSONA" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PERSONA">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="NUM_DOCUMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TIP_DOCUMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOMBRES" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APE_PATERNO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="APE_MATERNO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TELEFONO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EMAIL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_DEPARTAMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DES_DEPARTAMENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_PROVINCIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DES_PROVINCIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_DISTRITO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DES_DISTRITO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DIRECCION" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FEC_NACIMIENTO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_TIP_DOMICILIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOM_TIP_DOMICILIO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_TIP_NUMERO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOM_TIP_NUMERO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_INTERIOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOM_INTERIOR" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_ZONA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NOM_ZONA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="REFERENCIA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_NACIONALIDAD" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="COD_SEXO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MENSAJE" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RESPUESTA" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ESTADO" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MCA_ASEGURADO" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Valor_Sub_Modelo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_cod_marca" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_cod_modelo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_cod_sub_modelo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_anio_sub_modelo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Valor_Sub_ModeloResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="Valor_Sub_ModeloResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReciboPoliza">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="p_Cod_Cia" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_Cod_Ramo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_Num_Poliza" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_Num_Spto" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_Num_Apli" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="p_Num_Spto_Apli" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ReciboPolizaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ReciboPolizaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ConsultaPlacaXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaPlacaXML" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaPlacaXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaPlacaXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaPersonaXMLSoapIn">
+    <wsdl:part name="parameters" element="tns:ConsultaPersonaXML" />
+  </wsdl:message>
+  <wsdl:message name="ConsultaPersonaXMLSoapOut">
+    <wsdl:part name="parameters" element="tns:ConsultaPersonaXMLResponse" />
+  </wsdl:message>
+  <wsdl:message name="Valor_Sub_ModeloSoapIn">
+    <wsdl:part name="parameters" element="tns:Valor_Sub_Modelo" />
+  </wsdl:message>
+  <wsdl:message name="Valor_Sub_ModeloSoapOut">
+    <wsdl:part name="parameters" element="tns:Valor_Sub_ModeloResponse" />
+  </wsdl:message>
+  <wsdl:message name="ReciboPolizaSoapIn">
+    <wsdl:part name="parameters" element="tns:ReciboPoliza" />
+  </wsdl:message>
+  <wsdl:message name="ReciboPolizaSoapOut">
+    <wsdl:part name="parameters" element="tns:ReciboPolizaResponse" />
+  </wsdl:message>
+  <wsdl:portType name="wsConsultaDatosSoap">
+    <wsdl:operation name="ConsultaPlacaXML">
+      <wsdl:input message="tns:ConsultaPlacaXMLSoapIn" />
+      <wsdl:output message="tns:ConsultaPlacaXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPersonaXML">
+      <wsdl:input message="tns:ConsultaPersonaXMLSoapIn" />
+      <wsdl:output message="tns:ConsultaPersonaXMLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Valor_Sub_Modelo">
+      <wsdl:input message="tns:Valor_Sub_ModeloSoapIn" />
+      <wsdl:output message="tns:Valor_Sub_ModeloSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ReciboPoliza">
+      <wsdl:input message="tns:ReciboPolizaSoapIn" />
+      <wsdl:output message="tns:ReciboPolizaSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="wsConsultaDatosSoap" type="tns:wsConsultaDatosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultaPlacaXML">
+      <soap:operation soapAction="http://www.mapfre.com.pe/ConsultaPlacaXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPersonaXML">
+      <soap:operation soapAction="http://www.mapfre.com.pe/ConsultaPersonaXML" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Valor_Sub_Modelo">
+      <soap:operation soapAction="http://www.mapfre.com.pe/Valor_Sub_Modelo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReciboPoliza">
+      <soap:operation soapAction="http://www.mapfre.com.pe/ReciboPoliza" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="wsConsultaDatosSoap12" type="tns:wsConsultaDatosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultaPlacaXML">
+      <soap12:operation soapAction="http://www.mapfre.com.pe/ConsultaPlacaXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaPersonaXML">
+      <soap12:operation soapAction="http://www.mapfre.com.pe/ConsultaPersonaXML" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Valor_Sub_Modelo">
+      <soap12:operation soapAction="http://www.mapfre.com.pe/Valor_Sub_Modelo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReciboPoliza">
+      <soap12:operation soapAction="http://www.mapfre.com.pe/ReciboPoliza" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="wsConsultaDatos">
+    <wsdl:port name="wsConsultaDatosSoap" binding="tns:wsConsultaDatosSoap">
+      <soap:address location="http://www7.mapfre.com.pe/wsConsultaEQUIFAX/wsConsultaDatos.asmx" />
+    </wsdl:port>
+    <wsdl:port name="wsConsultaDatosSoap12" binding="tns:wsConsultaDatosSoap12">
+      <soap12:address location="http://www7.mapfre.com.pe/wsConsultaEQUIFAX/wsConsultaDatos.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
