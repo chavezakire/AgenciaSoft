@@ -3,7 +3,6 @@ package managers;
 import ServiceClient.PERSONA;
 import ServiceClient.WsConsultaDatos;
 
-
 public class MngCliente {
 
     public static PERSONA consultaPersonaXML(java.lang.String tipoDoc, java.lang.String numDoc) {

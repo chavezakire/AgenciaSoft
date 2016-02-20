@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://www7.mapfre.com.pe/wsConsultaEQUIFAX/wsConsultaDatos.asmx?wsdl" uri="src/conf/xml-resources/web-service-references/wsConsultaDatos_1/wsdl/www7.mapfre.com.pe/wsConsultaEQUIFAX/wsConsultaDatos.asmx.wsdl"/>
+</catalog>

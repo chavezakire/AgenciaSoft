@@ -1,3 +1,5 @@
+<%@page import="ServiceClient.PERSONA"%>
+<%@page import="managers.MngCliente"%>
 <head>
     <title>Unify | Welcome...</title>
 
@@ -23,7 +25,8 @@
     <link rel="stylesheet" href="assets/css/pages/page_promo.css">
     <!-- CSS Theme -->    
     <link rel="stylesheet" href="assets/css/themes/default.css" id="style_color">
-    <link rel="stylesheet" href="assets/css/themes/headers/default.css" id="style_color-header-1">    
+    <link rel="stylesheet" href="assets/css/themes/headers/default.css" id="style_color-header-1">  
+    
 </head> 
 
 <body>
