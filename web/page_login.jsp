@@ -40,6 +40,9 @@
                         <label><a href="user_register.jsp">REGISTRATE</a></label>                        
                     </div>
                     <div class="col-md-6">
+                        <label><a href="consultarHabitacion.jsp">Consultar Habitación</a></label>
+                    </div>
+                    <div class="col-md-6">
                         <button class="btn-u pull-right" type="submit">Ingresar</button>                        
                     </div>
                 </div>
