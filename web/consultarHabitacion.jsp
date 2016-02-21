@@ -1,76 +1,94 @@
+<%@page import="services.Habitacion"%>
 <%@include file="header_page.jsp" %>
-<%@page import="managers.MngCliente" %>  
-<body>
-    <script type="text/javascript">
+<%@page import="managers.MngHabitacion" %>  
+
+<head>
+    <script type="text/javascript"  >
         
-        function findPeople(dni){
-        <%
-            MngCliente mngCli = new MngCliente();
-            mngCli.consultaPersonaXML("DNI","74167957");  
-        %>               
+        function findHabitacion(){
+            var dpto = document.getElementById('cboDpto').value;
+            var prov = document.getElementById('cboProvincia').value;
+            var dist = document.getElementById('cboDistrito').value;
+            var fDesde = document.getElementsByName('txtFechaDesde')[0].value;
+            var fHasta = document.getElementsByName('txtFechaHasta')[0].value;
+            
+            if(fDesde === "" || fHasta === ""){
+                alert("Ingrese un rango de fechas");
+                return;
+            }else{
+                document.getElementById("frmHabitacion").submit();
+            }            
         }
         
-    </script>
-    <div class="container" style="width: 600px;">		
+    </script>    
+</head>
+
+<jsp:useBean id="habitacion" scope="session" class="services.Habitacion" />
+
+<body>
+    <form id="frmHabitacion" action="ServletHabitacion" >
+        <div class="container" style="width: 600px;">		
 	<div class="row">
         <div class="panel panel-grey margin-bottom-40">
             <div class="panel-heading">
                 <h3 class="panel-title"><i class="icon-tasks"></i>Consultar Habitación</h3>
             </div>
             <div class="panel-body">                                                      
-                <form class="form-inline" role="form">
+                <!--<form class="form-inline" role="form">-->
                     <div class="input-group margin-bottom-5">
                         <span class="input-group-addon"><i class="icon-user"></i></span>
-                        <input type="" placeholder="DNI" class="form-control" onkeydown="findPeople(this.value)" >
-                    </div>   
-                    <div class="input-group margin-bottom-5">
-                        <span class="input-group-addon"><i class="icon-user"></i></span>
-                        <select class="form-control">
+                        <select class="form-control" name="cboDpto">
                             <option value=""></option>
-                            <option value="Lima">Lima</option>
-                            <option value="Callao">Callao</option>
+                            <option value="15">Lima</option>
+                            <option value="7">Callao</option>
                         </select>
                     </div>  
                     <div class="input-group margin-bottom-5">
                         <span class="input-group-addon"><i class="icon-user"></i></span>
-                        <select class="form-control">
+                        <select class="form-control" name="cboProvincia">
                             <option value=""></option>
-                            <option value="Lima">Lima</option>
-                            <option value="Callao">Callao</option>
+                            <option value="1">Lima</option>
+                            <option value="1">Callao</option>
                         </select>
                     </div>
                     <div class="input-group margin-bottom-5">
                         <span class="input-group-addon"><i class="icon-user"></i></span>
-                        <select class="form-control">
+                        <select class="form-control" name="cboDistrito">
                             <option value=""></option>
-                            <option value="San Miguel">San Miguel</option>
-                            <option value="Mi Perú">Mi Perú</option>
+                            <option value="36">San Miguel</option>
+                            <option value="7">Mi Perú</option>
                         </select>
                     </div>
                     <div class="input-group margin-bottom-5">
                         <span class="input-group-addon"><i class="icon-user"></i></span>
-                        <input type="text" placeholder="Hotel" class="form-control">
+                        <input type="text" name="txtHotel" value="<%= (habitacion.getHotel()!=null ? habitacion.getHotel() : "") %>" placeholder="Hotel" class="form-control">
                     </div>
                     <div class="input-group margin-bottom-5">
                         <span class="input-group-addon"><i class="icon-user"></i></span>
-                        <select class="form-control">
+                        <select class="form-control" value="<%= (habitacion.getTipoHab() != null ? habitacion.getTipoHab() : "") %>" name="cboTipoHab">
                             <option value=""></option>
-                            <option value="Matrimonial">Matrimonial</option>
-                            <option value="Simple">Simple</option>
+                            <option value="1">Simple</option>
+                            <option value="2">Doble</option>
+                            <option value="3">Triple</option>
+                            <option value="4">Matrimonial</option>
+                            <option value="5">Suite Junior</option>
+                            <option value="6">Suite Doble</option>
+                            <option value="7">Corner Suite</option>
+                            <option value="8">Simple</option>
                         </select>
                     </div>
                     <div class="input-group margin-bottom-5">
                         <span class="input-group-addon"><i class="icon-user"></i></span>
-                        <input type="date" placeholder="Fecha Desde" class="form-control">
+                        <input type="date" name="txtFechaDesde" placeholder="Fecha Desde" class="form-control">
                     </div>
                     <div class="input-group margin-bottom-5">
                         <span class="input-group-addon"><i class="icon-user"></i></span>
-                        <input type="date" placeholder="Fecha Hasta" class="form-control">
+                        <input type="date" name="txtFechaHasta" placeholder="Fecha Hasta" class="form-control">
                     </div>
                     <div class="col-md-7">
-                        <button class="btn-u pull-right" onclick="pruebas();">Consultar</button>
+                        <button class="btn-u pull-right" onclick="findHabitacion();">Consultar</button>
                     </div>
-                </form>
+                <!--</form>-->
             </div>
 
             <div class="panel panel-red margin-bottom-40">
@@ -121,5 +139,6 @@
     </div><!--/row-->
 </div><!--/container-->		
 <!--=== End Content Part ===-->
-
+    </form>
+                            
 </body>
