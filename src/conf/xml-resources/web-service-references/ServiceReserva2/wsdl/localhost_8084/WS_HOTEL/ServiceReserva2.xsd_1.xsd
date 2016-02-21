@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI at http://jax-ws.dev.java.net. RI's version is JAX-WS RI 2.2-hudson-740-. --><xs:schema xmlns:tns="http://services/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services/">
+
+<xs:element name="HistorialReservaCliente" type="tns:HistorialReservaCliente" />
+
+<xs:element name="HistorialReservaClienteResponse" type="tns:HistorialReservaClienteResponse" />
+
+<xs:element name="add_Reserva" type="tns:add_Reserva" />
+
+<xs:element name="add_ReservaResponse" type="tns:add_ReservaResponse" />
+
+<xs:element name="hello" type="tns:hello" />
+
+<xs:element name="helloResponse" type="tns:helloResponse" />
+
+<xs:complexType name="HistorialReservaCliente">
+<xs:sequence>
+<xs:element name="dni" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="HistorialReservaClienteResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:reserva" minOccurs="0" maxOccurs="unbounded" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="reserva">
+<xs:sequence>
+<xs:element name="cliente" type="tns:cliente" minOccurs="0" />
+<xs:element name="dias" type="xs:int" />
+<xs:element name="fec_fin" type="xs:string" minOccurs="0" />
+<xs:element name="fec_inicio" type="xs:string" minOccurs="0" />
+<xs:element name="fec_reserva" type="xs:string" minOccurs="0" />
+<xs:element name="habitacion" type="tns:habitacion" minOccurs="0" />
+<xs:element name="id_reserva" type="xs:int" />
+<xs:element name="observacion" type="xs:string" minOccurs="0" />
+<xs:element name="venta_total" type="xs:float" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="cliente">
+<xs:sequence>
+<xs:element name="apematerno" type="xs:string" minOccurs="0" />
+<xs:element name="apepaterno" type="xs:string" minOccurs="0" />
+<xs:element name="direccion1" type="xs:string" minOccurs="0" />
+<xs:element name="dni" type="xs:string" minOccurs="0" />
+<xs:element name="fec_nacimiento" type="xs:string" minOccurs="0" />
+<xs:element name="mail" type="xs:string" minOccurs="0" />
+<xs:element name="nombres" type="xs:string" minOccurs="0" />
+<xs:element name="sexo" type="xs:string" minOccurs="0" />
+<xs:element name="telefono" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="habitacion">
+<xs:sequence>
+<xs:element name="cod_habitacion" type="xs:string" minOccurs="0" />
+<xs:element name="estado" type="xs:string" minOccurs="0" />
+<xs:element name="hotel" type="tns:hotel" minOccurs="0" />
+<xs:element name="id_habitacion" type="xs:int" />
+<xs:element name="numhab" type="xs:string" minOccurs="0" />
+<xs:element name="piso" type="xs:string" minOccurs="0" />
+<xs:element name="precio" type="xs:float" />
+<xs:element name="tipo_hab" type="tns:tipoHabitacion" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hotel">
+<xs:sequence>
+<xs:element name="direccion" type="xs:string" minOccurs="0" />
+<xs:element name="estrella" type="xs:string" minOccurs="0" />
+<xs:element name="id_hotel" type="xs:int" />
+<xs:element name="mail" type="xs:string" minOccurs="0" />
+<xs:element name="phone1" type="xs:string" minOccurs="0" />
+<xs:element name="phone2" type="xs:string" minOccurs="0" />
+<xs:element name="razon_social" type="xs:string" minOccurs="0" />
+<xs:element name="ruc" type="xs:string" minOccurs="0" />
+<xs:element name="ubigeo" type="xs:int" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoHabitacion">
+<xs:sequence>
+<xs:element name="detalle" type="xs:string" minOccurs="0" />
+<xs:element name="id_tipo_hab" type="xs:int" />
+<xs:element name="nombre" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="add_Reserva">
+<xs:sequence>
+<xs:element name="habitacion" type="xs:int" />
+<xs:element name="fecini" type="xs:string" minOccurs="0" />
+<xs:element name="fecfin" type="xs:string" minOccurs="0" />
+<xs:element name="venta" type="xs:float" />
+<xs:element name="cliente" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="add_ReservaResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="hello">
+<xs:sequence>
+<xs:element name="name" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="helloResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0" />
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
