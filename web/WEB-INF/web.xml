@@ -13,6 +13,10 @@
         <servlet-name>ServletReserva</servlet-name>
         <servlet-class>src.ServletReserva</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ServletHabitacionPrueba</servlet-name>
+        <servlet-class>src.ServletHabitacionPrueba</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ServletPersona</servlet-name>
         <url-pattern>/ServletPersona</url-pattern>
@@ -24,6 +28,10 @@
     <servlet-mapping>
         <servlet-name>ServletReserva</servlet-name>
         <url-pattern>/ServletReserva</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ServletHabitacionPrueba</servlet-name>
+        <url-pattern>/ServletHabitacionPrueba</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
