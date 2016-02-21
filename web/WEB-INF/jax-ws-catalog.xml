@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
     <system systemId="http://www7.mapfre.com.pe/wsConsultaEQUIFAX/wsConsultaDatos.asmx?wsdl" uri="wsdl/www7.mapfre.com.pe/wsConsultaEQUIFAX/wsConsultaDatos.asmx.wsdl"/>
+    <system systemId="http://localhost:8084/WS_HOTEL/ServiceHabitacion2?wsdl" uri="wsdl/localhost_8084/WS_HOTEL/ServiceHabitacion2.wsdl"/>
+    <system systemId="http://localhost:8084/WS_HOTEL/ServiceHabitacion2?xsd=1" uri="wsdl/localhost_8084/WS_HOTEL/ServiceHabitacion2.xsd_1.xsd"/>
+    <system systemId="http://localhost:8084/WS_HOTEL/ServiceReserva2?wsdl" uri="wsdl/localhost_8084/WS_HOTEL/ServiceReserva2.wsdl"/>
+    <system systemId="http://localhost:8084/WS_HOTEL/ServiceReserva2?xsd=1" uri="wsdl/localhost_8084/WS_HOTEL/ServiceReserva2.xsd_1.xsd"/>
+    <system systemId="http://localhost:8084/WS_HOTEL/ServiceHabitacion3?wsdl" uri="wsdl/localhost_8084/WS_HOTEL/ServiceHabitacion3.wsdl"/>
+    <system systemId="http://localhost:8084/WS_HOTEL/ServiceHabitacion3?xsd=1" uri="wsdl/localhost_8084/WS_HOTEL/ServiceHabitacion3.xsd_1.xsd"/>
 </catalog>
