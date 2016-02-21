@@ -21,7 +21,7 @@ public class Conn {
 
     public static void setConn() {
         String user = "root";
-        String pass = "";
+        String pass = "admin";
         String url = "jdbc:mysql://localhost:3306/bdhotel2";
         try {
             Class.forName("com.mysql.jdbc.Driver");
