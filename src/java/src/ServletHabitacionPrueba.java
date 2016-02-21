@@ -13,14 +13,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import managers.MngReserva;
-import services.Reserva;
+import managers.MngHabitacion;
+import services.Habitacion;
 
 /**
  *
  * @author Leyo
  */
-public class ServletReserva extends HttpServlet {
+public class ServletHabitacionPrueba extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -39,10 +39,10 @@ public class ServletReserva extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet ServletReserva</title>");            
+            out.println("<title>Servlet ServletHabitacionPrueba</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet ServletReserva at " + request.getContextPath() + "</h1>");
+            out.println("<h1>Servlet ServletHabitacionPrueba at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -51,14 +51,15 @@ public class ServletReserva extends HttpServlet {
     public void service(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        MngReserva mngRes = new MngReserva();
-        List<Reserva> reserva;
+        MngHabitacion mngHab = new MngHabitacion();
+        List<Habitacion> habitacion;
         
-        String dni = request.getParameter("txtDni");
+        String fDesde = request.getParameter("txtFechaDesde");
+        String fHasta = request.getParameter("txtFechaHasta");
         
-        reserva = mngRes.historialReservaCliente(dni);
-                
-        request.getSession().setAttribute("reserva", reserva);
+        habitacion = mngHab.findHabDisponible(0, 0, fDesde, fHasta);
+        
+        request.getSession().setAttribute("habitacion", habitacion);
         RequestDispatcher requestDispatcher = request.getRequestDispatcher("/consultarHabitacion.jsp");
         requestDispatcher.forward(request, response);
     }

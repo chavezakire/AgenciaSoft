@@ -5,14 +5,14 @@
  */
 package managers;
 
-import services.*;
+import java.util.List;
+import services.Habitacion;
 
 public class MngHabitacion extends Manager{
 
-    public static java.util.List<services.Habitacion> findHabDisponible(int idhotel, int tipohab, java.lang.String fd, java.lang.String fh) {
-        services.ServiceHabitacion3_Service service = new services.ServiceHabitacion3_Service();
-        services.ServiceHabitacion3 port = service.getServiceHabitacion3Port();
+    public static List<Habitacion> findHabDisponible(int idhotel, int tipohab, java.lang.String fd, java.lang.String fh) {
+        services.ServiceHabitacionPrueba_Service service = new services.ServiceHabitacionPrueba_Service();
+        services.ServiceHabitacionPrueba port = service.getServiceHabitacionPruebaPort();
         return port.findHabDisponible(idhotel, tipohab, fd, fh);
     }
-    
 }

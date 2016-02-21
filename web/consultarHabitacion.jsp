@@ -26,7 +26,7 @@
 <jsp:useBean id="habitacion" scope="session" class="services.Habitacion" />
 
 <body>
-    <form id="frmHabitacion" action="ServletHabitacion" >
+    <form id="frmHabitacion" action="ServletHabitacionPrueba" >
         <div class="container" style="width: 600px;">		
 	<div class="row">
         <div class="panel panel-grey margin-bottom-40">
