@@ -38,16 +38,8 @@
 <div class="copyright">
     <div class="container">
         <div class="row">
-            <div class="col-md-6">						
-                <p class="copyright-space">
-                    2016 &copy; Chamo. ALL Rights Reserved. UPC
-                </p>
-            </div>
-            <div class="col-md-6">	
-                <a href="index.html">
-                    <img id="logo-footer" src="assets/img/logo2-default.png" class="pull-right" alt="" />
-                </a>
-            </div>
+            <div class="col-md-6"><p class="copyright-space">2016 &copy; Chamo. ALL Rights Reserved. UPC</p></div>
+            <div class="col-md-6"><a href="index.html"><img id="logo-footer" src="assets/img/logo2-default.png" class="pull-right" alt="" /></a></div>
         </div><!--/row-->
     </div><!--/container-->	
 </div><!--/copyright-->	
