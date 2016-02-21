@@ -14,18 +14,18 @@ import javax.xml.bind.annotation.XmlType;
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="p_cod_marca" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="p_cod_modelo" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="p_cod_sub_modelo" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="p_anio_sub_modelo" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="p_cod_marca" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="p_cod_modelo" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="p_cod_sub_modelo" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="p_anio_sub_modelo" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

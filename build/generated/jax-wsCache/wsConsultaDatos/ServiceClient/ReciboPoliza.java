@@ -14,20 +14,20 @@ import javax.xml.bind.annotation.XmlType;
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="p_Cod_Cia" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="p_Cod_Ramo" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="p_Num_Poliza" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="p_Num_Spto" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="p_Num_Apli" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *         &lt;element name="p_Num_Spto_Apli" type="{http://www.w3.org/2001/XMLSchema}int"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="p_Cod_Cia" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="p_Cod_Ramo" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="p_Num_Poliza" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
+ *         &lt;element name="p_Num_Spto" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="p_Num_Apli" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *         &lt;element name="p_Num_Spto_Apli" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

@@ -30,19 +30,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ConsultaPersonaXML }
+     * Create an instance of {@link ConsultaPlacaXML }
      * 
      */
-    public ConsultaPersonaXML createConsultaPersonaXML() {
-        return new ConsultaPersonaXML();
-    }
-
-    /**
-     * Create an instance of {@link ReciboPolizaResponse }
-     * 
-     */
-    public ReciboPolizaResponse createReciboPolizaResponse() {
-        return new ReciboPolizaResponse();
+    public ConsultaPlacaXML createConsultaPlacaXML() {
+        return new ConsultaPlacaXML();
     }
 
     /**
@@ -62,27 +54,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ValorSubModelo }
+     * Create an instance of {@link ConsultaPersonaXML }
      * 
      */
-    public ValorSubModelo createValorSubModelo() {
-        return new ValorSubModelo();
-    }
-
-    /**
-     * Create an instance of {@link ValorSubModeloResponse }
-     * 
-     */
-    public ValorSubModeloResponse createValorSubModeloResponse() {
-        return new ValorSubModeloResponse();
-    }
-
-    /**
-     * Create an instance of {@link ConsultaPlacaXML }
-     * 
-     */
-    public ConsultaPlacaXML createConsultaPlacaXML() {
-        return new ConsultaPlacaXML();
+    public ConsultaPersonaXML createConsultaPersonaXML() {
+        return new ConsultaPersonaXML();
     }
 
     /**
@@ -102,11 +78,35 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link ValorSubModelo }
+     * 
+     */
+    public ValorSubModelo createValorSubModelo() {
+        return new ValorSubModelo();
+    }
+
+    /**
+     * Create an instance of {@link ValorSubModeloResponse }
+     * 
+     */
+    public ValorSubModeloResponse createValorSubModeloResponse() {
+        return new ValorSubModeloResponse();
+    }
+
+    /**
      * Create an instance of {@link ReciboPoliza }
      * 
      */
     public ReciboPoliza createReciboPoliza() {
         return new ReciboPoliza();
+    }
+
+    /**
+     * Create an instance of {@link ReciboPolizaResponse }
+     * 
+     */
+    public ReciboPolizaResponse createReciboPolizaResponse() {
+        return new ReciboPolizaResponse();
     }
 
 }
